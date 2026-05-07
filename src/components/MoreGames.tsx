@@ -4,52 +4,52 @@ import { ChevronLeft, Shield, ExternalLink } from 'lucide-react';
 function MoreGames() {
   const games = [
     {
-      title: "Cyber Defense Simulator",
-      description: "Protect your network from incoming cyber attacks in real-time scenarios",
-      difficulty: "Medium",
-      category: "Strategy",
+      title: "网络防御模拟",
+      description: "在实时场景中保护你的网络，抵御来袭的网络攻击。",
+      difficulty: "中等",
+      category: "策略",
       link: "https://play.google.com/store/apps/details?id=cyber.security.learn.programming.coding.hacking.software.development.cybersecurity&hl=en"
     },
     {
-      title: "Code Breaker Challenge",
-      description: "Decrypt complex codes and prevent data breaches against the clock",
-      difficulty: "Hard",
-      category: "Puzzle",
+      title: "破译挑战",
+      description: "在限定时间内解开复杂代码，阻止数据泄露事件发生。",
+      difficulty: "困难",
+      category: "解谜",
       link: "https://www.hackthebox.com/"
     },
     {
-      title: "Security Expert Training",
-      description: "Learn cybersecurity fundamentals through interactive challenges",
-      difficulty: "Easy",
-      category: "Educational",
+      title: "安全专家训练",
+      description: "通过互动挑战学习网络安全基础知识。",
+      difficulty: "简单",
+      category: "教育",
       link: "https://owasp.org/www-community/Initiatives/"
     },
     {
-      title: "Phishing Frenzy",
-      description: "Identify and stop phishing attempts in a corporate environment",
-      difficulty: "Medium",
-      category: "Simulation",
+      title: "钓鱼狂潮",
+      description: "在企业环境中识别并阻止钓鱼攻击。",
+      difficulty: "中等",
+      category: "模拟",
       link: "https://www.knowbe4.com/"
     },
     {
-      title: "Firewall Fortress",
-      description: "Configure and maintain network security systems under pressure",
-      difficulty: "Hard",
-      category: "Strategy",
+      title: "防火墙堡垒",
+      description: "在压力下配置并维护网络安全系统。",
+      difficulty: "困难",
+      category: "策略",
       link: "https://www.tryhackme.com/"
     },
     {
-      title: "Data Guardian",
-      description: "Protect sensitive information from sophisticated breaches",
-      difficulty: "Expert",
-      category: "Puzzle",
+      title: "数据守护者",
+      description: "保护敏感信息免受复杂的入侵攻击。",
+      difficulty: "专家",
+      category: "解谜",
       link: "https://www.root-me.org/"
     }
   ];
 
   return (
     <div className="min-h-screen bg-[#0B0F19] relative overflow-hidden">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
           backgroundImage: 'url("../BG.png")',
@@ -62,15 +62,15 @@ function MoreGames() {
             <div className="flex items-center gap-3 mb-8">
               <Shield className="w-8 h-8 text-cyan-400" />
               <h1 className="text-4xl font-bold text-white tracking-wider" style={{ textShadow: '0 0 20px rgba(6, 182, 212, 0.5)' }}>
-                Cybersecurity Games
+                网络安全游戏
               </h1>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {games.map((game, index) => (
-                <div 
+                <div
                   key={index}
-                  className="flex flex-col bg-cyan-600/10 rounded-lg p-6 border border-cyan-500/30 hover:border-cyan-400/50 
+                  className="flex flex-col bg-cyan-600/10 rounded-lg p-6 border border-cyan-500/30 hover:border-cyan-400/50
                   transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 h-full"
                 >
                   <div className="flex-1">
@@ -85,25 +85,25 @@ function MoreGames() {
                     href={game.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-cyan-600/20 hover:bg-cyan-500/30 
+                    className="flex items-center justify-center gap-2 bg-cyan-600/20 hover:bg-cyan-500/30
                     text-cyan-300 py-2 rounded-lg transition-colors"
                   >
-                    Play Now <ExternalLink className="w-4 h-4" />
+                    立即游玩 <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
               ))}
             </div>
 
             <div className="mt-8 flex justify-between items-center">
-              <Link 
+              <Link
                 to="/"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 <ChevronLeft className="w-5 h-5 mr-2" />
-                Back to Menu
+                返回菜单
               </Link>
               <div className="text-sm text-cyan-600">
-                External links open in new tab. Games hosted by partner platforms.
+                外部链接将在新标签页中打开。游戏由合作平台提供。
               </div>
             </div>
           </div>

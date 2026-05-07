@@ -9,80 +9,80 @@ function PlayChallenges() {
   const challengeTopics = [
     {
       id: "intro-cybersecurity",
-      name: "Introduction to Cybersecurity",
-      difficulty: "Beginner",
+      name: "网络安全入门",
+      difficulty: "初级",
       color: "green"
     },
     {
       id: "phishing-defense",
-      name: "Phishing Defense Simulator",
-      difficulty: "Intermediate",
+      name: "钓鱼攻击防御模拟",
+      difficulty: "中级",
       color: "yellow"
     },
     {
       id: "sql-1d",
-      name: "SQL Injection ",
-      difficulty: "Advanced",
+      name: "SQL 注入攻击",
+      difficulty: "高级",
       color: "red"
     },
     {
       id: "Password1",
-      name: "Password Testing",
-      difficulty: "Easy",
+      name: "密码强度测试",
+      difficulty: "简单",
       color: "green"
     },
     {
       id: "encrypt-decrypt",
-      name: "Encryption And Decryption Simulation",
-      difficulty: "Intermediate",
+      name: "加密与解密模拟",
+      difficulty: "中级",
       color: "yellow"
     },
     {
       id: "MITM",
-      name: "Man In The Middle Attack ",
-      difficulty: "Advanced",
+      name: "中间人攻击",
+      difficulty: "高级",
       color: "red"
     },
     {
       id: "TFA",
-      name: "Two Factor Authentication ",
-      difficulty: "Easy",
+      name: "双因素认证",
+      difficulty: "简单",
       color: "green"
     },
     {
       id: "DFS",
-      name: "Digital Footprint Simulator",
-      difficulty: "Intermediate",
+      name: "数字足迹模拟",
+      difficulty: "中级",
       color: "yellow"
     },
     {
       id: "BFA",
-      name: "Brute Force Attack Simulator",
-      difficulty: "Advanced",
+      name: "暴力破解攻击模拟",
+      difficulty: "高级",
       color: "red"
     },
     {
       id: "CHS",
-      name: "Cyber Hygiene Simulator",
-      difficulty: "Easy",
+      name: "网络卫生模拟",
+      difficulty: "简单",
       color: "green"
     },
     {
       id: "DDOS",
-      name: "Denial OF Service (DDOS) Attack Simulator",
-      difficulty: "Intermediate",
+      name: "拒绝服务（DDOS）攻击模拟",
+      difficulty: "中级",
       color: "yellow"
     },
     {
       id: "XSS",
-      name: "Cross Site Scripting",
-      difficulty: "Advanced",
+      name: "跨站脚本攻击",
+      difficulty: "高级",
       color: "red"
     },
 
 
 
-    // Add more challenges as needed
+    // 可根据需要添加更多挑战
   ];
 
   const handleChallengeSelect = (challengeId: string) => {
@@ -140,16 +140,16 @@ function PlayChallenges() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
       <div className="max-w-7xl w-full">
-        <button 
+        <button
           onClick={() => navigate('/')}
           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors"
         >
           <ChevronLeft className="w-5 h-5 mr-2" />
-          Back to Menu
+          返回菜单
         </button>
 
         <h1 className="text-4xl font-bold text-white mb-12 text-center tracking-wider">
-          CyberGuard Chronicles: Training Modules
+          网络卫士传奇：训练模块
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -157,7 +157,7 @@ function PlayChallenges() {
             <button
               key={challenge.id}
               onClick={() => handleChallengeSelect(challenge.id)}
-              className={`aspect-square rounded-lg font-bold p-6 shadow-lg 
+              className={`aspect-square rounded-lg font-bold p-6 shadow-lg
                 transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center
                 ${getButtonColor(challenge.color)}`}
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}

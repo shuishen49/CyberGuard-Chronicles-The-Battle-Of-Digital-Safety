@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { Shield, GamepadIcon, BookOpen, Globe, LogOut } from 'lucide-react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PlayChallenges from './components/PlayChallenges';
 import Quizzes from './components/Quizzes';
 import UsefulWebsites from './components/UsefulWebsites';
@@ -7,7 +6,6 @@ import Books from './components/Books';
 import Quit from './components/Quit';
 import PhishingDefense3D from './components/PhishingDefense3D';
 import EncryptAndDecrypt from './components/EncryptAndDecrypt';
-import Chatbot from './components/Chatbot';
 import SQL from './components/SQL';
 import MITM from './components/MITM';
 import Intro from './components/Intro';
@@ -19,78 +17,25 @@ import DDOS from './components/DDOS';
 import CHS from './components/CHS';
 import XSS from './components/XSS';
 
-function Home() {
-  const menuItems = [
-    { name: '挑战关卡', path: `${import.meta.env.BASE_URL}IntroToCyber-main/sense-hack/index.html`, icon: GamepadIcon, external: true },
-    { name: '知识测验', path: '/quizes', icon: Shield },
-    { name: '实用网站', path: '/useful-websites', icon: Globe },
-    { name: '推荐书籍', path: '/books', icon: BookOpen },
-    { name: '退出游戏', path: '/quit', icon: LogOut }
-  ];
-
-  return (
-    <div className="relative z-10 min-h-screen flex items-center justify-between px-8 md:px-16">
-      <div className="bg-[#0B0F19]/80 p-8 rounded-2xl backdrop-blur-sm border border-cyan-500/20 shadow-2xl shadow-cyan-500/10">
-        <div className="flex items-center gap-3 mb-8">
-          <Shield className="w-8 h-8 text-cyan-400" />
-          <h1 className="text-4xl font-bold text-white tracking-wider" style={{ textShadow: '0 0 20px rgba(6, 182, 212, 0.5)' }}>
-            网络卫士传奇
-          </h1>
-        </div>
-
-        <nav>
-          <ul className="space-y-4">
-            {menuItems.map((item, index) => {
-              const IconComponent = item.icon;
-              const linkClassName = "block w-full text-xl px-8 py-3 rounded-lg bg-cyan-600/20 hover:bg-cyan-500/30 text-cyan-300 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 text-center flex items-center justify-center gap-2";
-              const linkStyle = { textShadow: '0 0 10px rgba(6, 182, 212, 0.3)' };
-              return (
-                <li key={index}>
-                  {item.external ? (
-                    <a
-                      href={item.path}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={linkClassName}
-                      style={linkStyle}
-                    >
-                      <IconComponent className="w-5 h-5" />
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={linkClassName}
-                      style={linkStyle}
-                    >
-                      <IconComponent className="w-5 h-5" />
-                      {item.name}
-                    </Link>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
-      <Chatbot />
-    </div>
-  );
-}
+import ModuleSelect from './shared/components/ModuleSelect';
+import CultivationGame from './modules/cultivation/CultivationGame';
+import VulnLab from './modules/vuln-lab/VulnLab';
+import IncidentResponse from './modules/incident-response/IncidentResponse';
+import Arena from './modules/arena/Arena';
 
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-[#0B0F19] relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40"
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40 pointer-events-none"
           style={{
             backgroundImage: 'url("https://i.ibb.co/JW83rLVJ/BG.png")',
           }}
         />
-        
+
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ModuleSelect />} />
           <Route path="/play-challenges" element={<PlayChallenges />} />
           <Route path="/intro-cybersecurity" element={<PlayChallenges />} />
           <Route path="/quizes" element={<Quizzes />} />
@@ -109,7 +54,11 @@ function App() {
           <Route path="/CHS-1d" element={<CHS/>}/>
           <Route path="/DDOS-1d" element={<DDOS/>}/>
           <Route path="/XSS-1d" element={<XSS/>}/>
-          
+
+          <Route path="/cultivation" element={<CultivationGame />} />
+          <Route path="/vuln-lab" element={<VulnLab />} />
+          <Route path="/incident-response" element={<IncidentResponse />} />
+          <Route path="/arena" element={<Arena />} />
         </Routes>
       </div>
     </Router>

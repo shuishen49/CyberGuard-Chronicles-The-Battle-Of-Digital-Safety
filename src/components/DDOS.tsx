@@ -5,7 +5,7 @@ const DDOS = () => {
     window.location.href = "https://ddos-attack712.blogspot.com/";
   }, []);
 
-  return <p>Redirecting...</p>;
+  return <p>正在跳转……</p>;
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

@@ -16,31 +16,31 @@ function Quit() {
           <div className="flex items-center justify-center gap-3 mb-8">
             <Shield className="w-8 h-8 text-cyan-400" />
             <h1 className="text-4xl font-bold text-white tracking-wider" style={{ textShadow: '0 0 20px rgba(6, 182, 212, 0.5)' }}>
-              Quit Game
+              退出游戏
             </h1>
           </div>
 
-          <p className="text-gray-300 mb-8">Are you sure you want to quit the game?</p>
+          <p className="text-gray-300 mb-8">确定要退出游戏吗？</p>
 
           <div className="space-y-4">
-            <Link 
+            <Link
               to="/"
-              className="w-full flex items-center justify-center gap-2 bg-cyan-600/20 hover:bg-cyan-500/30 
-                text-cyan-300 py-3 px-6 rounded-lg transition-all duration-300 border border-cyan-500/30 
+              className="w-full flex items-center justify-center gap-2 bg-cyan-600/20 hover:bg-cyan-500/30
+                text-cyan-300 py-3 px-6 rounded-lg transition-all duration-300 border border-cyan-500/30
                 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20"
             >
               <Home className="w-5 h-5" />
-              Return to Menu
+              返回菜单
             </Link>
-            
-            <button 
-              className="w-full flex items-center justify-center gap-2 bg-red-600/20 hover:bg-red-500/30 
-                text-red-300 py-3 px-6 rounded-lg transition-all duration-300 border border-red-500/30 
+
+            <button
+              className="w-full flex items-center justify-center gap-2 bg-red-600/20 hover:bg-red-500/30
+                text-red-300 py-3 px-6 rounded-lg transition-all duration-300 border border-red-500/30
                 hover:border-red-400/50 hover:shadow-lg hover:shadow-red-500/20"
               onClick={() => window.close()}
             >
               <LogOut className="w-5 h-5" />
-              Quit Game
+              退出游戏
             </button>
           </div>
         </div>

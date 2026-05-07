@@ -5,7 +5,7 @@ const TFA = () => {
     window.location.href = "https://two-factor-authentication712.blogspot.com/";
   }, []);
 
-  return <p>Redirecting...</p>;
+  return <p>正在跳转……</p>;
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

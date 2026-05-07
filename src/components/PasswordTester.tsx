@@ -5,7 +5,7 @@ const PT = () => {
     window.location.href = "https://password-strength-tester.blogspot.com/";
   }, []);
 
-  return <p>Redirecting...</p>;
+  return <p>正在跳转……</p>;
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

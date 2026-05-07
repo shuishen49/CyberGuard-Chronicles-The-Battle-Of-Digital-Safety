@@ -5,7 +5,7 @@ const EncryptAndDecrypt = () => {
     window.location.href = "https://encryption-and-decryption.blogspot.com/2025/03/encryption-and-decryption.html";
   }, []);
 
-  return <p>Redirecting...</p>;
+  return <p>正在跳转……</p>;
 };
 
 export default EncryptAndDecrypt;
